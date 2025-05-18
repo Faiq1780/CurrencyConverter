@@ -483,5 +483,11 @@ document.addEventListener('DOMContentLoaded', function() {
         fetchCurrencyData(parseFloat(quantityInput.value), currencySelect.value);
     }
     
-    console.log('Currency Converter initialized');
+    console.log('Currency Converter initialized');    
+
+    $('#currency').select2({
+        placeholder: 'Select a currency',
+        allowClear: true,
+        width: '100%'  // Makes it responsive
+    });    
 });

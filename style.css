@@ -398,3 +398,108 @@ footer a:hover {
         padding: 0.5rem;
     }
 }
+
+
+
+/* ===================== MATCH SELECT2 TO AMOUNT FIELD ===================== */
+
+/* Full-width and base settings */
+.select2-container {
+    width: 100% !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Selection box styling to match .form-control */
+.dark-mode .select2-container--default .select2-selection--single {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    padding: 0 0.75rem;
+    height: 44px;  /* 👈 exact match for input */
+    line-height: 1.5rem;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+}
+
+/* Rendered text */
+.dark-mode .select2-selection__rendered {
+    color: #fff !important;
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    line-height: 1.5rem;
+    padding-left: 0;
+    background: transparent !important;
+}
+
+/* Arrow fix */
+.dark-mode .select2-selection__arrow {
+    top: 50% !important;
+    transform: translateY(-50%);
+}
+
+/* Dropdown styles */
+.dark-mode .select2-dropdown {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 0 0 8px 8px;
+}
+
+/* Options list */
+.dark-mode .select2-results__option {
+    background-color: var(--background-color);
+    color: #9b6ff0;
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    padding: 10px;
+}
+
+/* Highlighted (hover) option */
+.dark-mode .select2-results__option--highlighted {
+    background-color: var(--background-color);
+    color: #fff;
+}
+
+/* Selected option in dropdown (soft look) */
+.dark-mode .select2-results__option[aria-selected="true"] {
+    background-color: #2c2c2c;
+    color: #fff;;
+    font-weight: normal;
+}
+
+/* Search box inside dropdown */
+.dark-mode .select2-search__field {
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background color of the selected currency in dropdown */
+.dark-mode .select2-container--default .select2-results__option[aria-selected="true"] {
+    background-color: #1f1f1f; /* 👈 Your custom background */
+    color: #ffff;            /* Optional text color */
+    font-weight: 500;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+    .dark-mode .select2-selection--single {
+        padding: 0.6rem;
+    }
+
+    .dark-mode .select2-search__field,
+    .dark-mode .select2-results__option {
+        font-size: 0.85rem;
+    }
+}
+
+
+
+
+
