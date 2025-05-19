@@ -486,7 +486,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Currency Converter initialized');    
 
     $('#currency').select2({
-        placeholder: 'Select a currency',
+        placeholder: 'Select a currency which you want to convert',
         allowClear: true,
         width: '100%'  // Makes it responsive
     });    
